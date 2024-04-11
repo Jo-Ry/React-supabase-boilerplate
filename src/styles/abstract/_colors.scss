@@ -1,0 +1,70 @@
+/*
+	Global colors for you to use in your project.
+
+	Steps:
+	    1: create your varations of your specific color.
+	    2: put into map. ( optional, but recommanded )
+
+	This will do 3 things for you:
+		1. you will be able to use your sass variables anywhere.
+
+		2. you get a utility class for background-color.
+			.bg-primary-100 {
+				background-color: ...;
+			}
+
+		3. you get a utility class for color.
+			.clr-primary-100 {
+				color: ...;
+			}
+*/
+
+/*
+	Higher number equivalents to darker color and vice versa and
+	think of the range between 100 and 900 where base is 400. so
+	each color can hold up to 9 variations if you only stick to the hundreds.
+
+	You can think of how font-weight works where regular size is 400.
+*/
+
+// TODO: change naming convention or something :) sofia approves
+$clr-neutral-100: hsl(0, 0%, 100%);
+$clr-neutral-200: hsl(0, 0%, 92%);
+$clr-neutral-300: hsl(0, 0%, 55%);
+$clr-neutral-fix: hsl(0, 0%, 66%); // TODO: fix color name
+$clr-neutral-400: hsl(0, 0%, 11%);
+$clr-neutral-700: hsl(0, 0%, 24%);
+$clr-neutral-800: hsl(0, 0%, 18%);
+$clr-neutral-900: hsl(0, 0%, 0%);
+
+$clr-primary-400: hsl(39, 100%, 50%);
+$clr-primary-500: hsl(33, 100%, 50%);
+
+$clr-error: hsl(0, 91%, 41%);
+
+$colors: (
+  neutral: (
+    100: $clr-neutral-100,
+    200: $clr-neutral-200,
+    300: $clr-neutral-300,
+    400: $clr-neutral-400,
+    700: $clr-neutral-700,
+    800: $clr-neutral-800,
+    900: $clr-neutral-900,
+  ),
+  primary: (
+    400: $clr-primary-400,
+    500: $clr-primary-500,
+  ),
+);
+
+@each $color, $color-map in $colors {
+  @each $shade, $value in $color-map {
+    .bg-#{$color}-#{$shade} {
+      background-color: $value;
+    }
+    .clr-#{$color}-#{$shade} {
+      color: $value;
+    }
+  }
+}

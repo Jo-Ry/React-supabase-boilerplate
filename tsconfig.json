@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Aliases */
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["src/*"],
+      "supabase/*": ["supabase/*"],
+    },
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noErrorTruncation": true
+  },
+  "include": ["src", "supabase", "public/scripts", "vite-env.d.ts"],
+  "exclude": [ "dist", "node_modules" ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

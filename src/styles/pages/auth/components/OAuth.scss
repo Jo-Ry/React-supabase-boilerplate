@@ -1,0 +1,33 @@
+@use '../../../abstract/' as *;
+
+.OAuth {
+	display: grid;
+	gap: rem(10);
+
+	button {
+		background-color: $clr-neutral-800;
+		border: 1px solid $clr-neutral-700;
+		color: $clr-neutral-100;
+
+		&:hover {
+			background-color: $clr-neutral-700;
+		}
+	}
+
+	// onlyThirdPartyProviders = true
+	&.horizontal {
+		grid-template-columns: repeat(auto-fit, minmax(76px, 1fr));
+
+		button {
+			display: grid;
+			place-items: center;
+		}
+	}
+
+	// onlyThirdPartyProviders = false
+	&.vertical {
+		button {
+			width: 100%;
+		}
+	}
+}

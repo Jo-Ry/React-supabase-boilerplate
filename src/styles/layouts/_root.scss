@@ -1,0 +1,13 @@
+@use '../abstract/' as *;
+@use '../layouts/navbar';
+
+#root {
+	height: 100vh;
+	background-color: $clr-neutral-400;
+}
+
+main {
+	height: calc( 100% - navbar.$height );
+	display: grid;
+	place-items: center;
+}
