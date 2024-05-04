@@ -3,6 +3,8 @@
 >
 > As for structure of the project i would say it is close to complete
 
+![image for login screen](https://github.com/Jo-Ry/React-supabase-boilerplate/assets/55887405/735ddf9b-3d70-4561-8fcf-a9696ce8bb6f)
+
 ## Express you art with Sass
 
 The `styles/` folder is organized to maintain a modular and scalable structure for our stylesheets and to import stylesheets, we no longer use the `@import` directive. Instead, we follow the new module system introduced by Sass.
