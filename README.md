@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# React + Supabase + TypeScript + Vite
 > This project is in a "work in progress"
 >
 > As for structure of the project i would say it is close to complete
